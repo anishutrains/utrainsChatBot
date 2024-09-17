@@ -51,7 +51,7 @@ def query_chatgpt(question):
             {"role": "system", "content": full_prompt},
             {"role": "user", "content": question}
         ],
-        max_tokens=150,  # Adjust as needed
+        max_tokens=50,  # Adjust as needed
         temperature=0.7
     )
     

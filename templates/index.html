@@ -51,7 +51,7 @@
         }
 
         .chatbox-footer input {
-            width: 85%;
+            width: 75%;
             padding: 10px;
             border-radius: 20px;
             border: 1px solid #ddd;
@@ -126,6 +126,9 @@
     <!-- Chat Footer -->
     <div class="chatbox-footer">
         <input type="text" id="user-input" class="form-control" placeholder="Type your message...">
+        <button id="mic-btn">
+            <i class="fas fa-microphone"></i>
+        </button>
         <button id="send-btn">
             <i class="fas fa-paper-plane"></i>
         </button>
@@ -135,15 +138,15 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-
 <script>
     const chatContainer = document.getElementById('chat-container');
     const userInput = document.getElementById('user-input');
     const sendBtn = document.getElementById('send-btn');
+    const micBtn = document.getElementById('mic-btn');
 
     sendBtn.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', handleKeyPress);
+    micBtn.addEventListener('click', startListening);
 
     function sendMessage() {
         const userMessage = userInput.value.trim();
@@ -199,8 +202,36 @@
             displayMessage('bot', 'Sorry, something went wrong. Please try again.');
         });
     }
-</script>
 
+    // Microphone functionality using Web Speech API
+    function startListening() {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+
+        recognition.onstart = function() {
+            micBtn.innerHTML = '<i class="fas fa-stop"></i>';
+        };
+
+        recognition.onresult = function(event) {
+            const transcript = event.results[0][0].transcript;
+            userInput.value = transcript;
+        };
+
+        recognition.onspeechend = function() {
+            recognition.stop();
+            micBtn.innerHTML = '<i class="fas fa-microphone"></i>';
+        };
+
+        recognition.onerror = function(event) {
+            console.error('Speech recognition error:', event.error);
+            recognition.stop();
+            micBtn.innerHTML = '<i class="fas fa-microphone"></i>';
+        };
+
+        recognition.start();
+    }
+</script>
 
 </body>
 </html>
