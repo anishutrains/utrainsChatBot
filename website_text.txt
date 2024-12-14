@@ -1,224 +1,110 @@
-When is next session?
-The next Session starts from 30th september 2024.The session will be held on monday and tuesday from 6:30 pm to 10 pm est. 
+1. When is the next session?
 
-the date for next session after 30th september will be available very soon.
+The next session starts on 30th September 2024. The classes will be held on Mondays and Tuesdays from 6:30 PM to 10:00 PM EST. The date for the session after 30th September will be announced soon.
 
-Why should I take this training ?
-Covid-19 came to prove that a lot of work can be done from home using only a computer. More and more companies are then in need of softwares to grow their business. Many of these companies are migrating their applications to the cloud. This has created a growing demand for IT professionals such as DevOps Engineers, Site Reliability Engineers, Cloud Engineers, Infrastructure Engineers, etc.
+2. Why should I take this training?
 
-So companies like Amazon, Google, Facebook and more need you as an IT professional to perform these operations.
+COVID-19 has shown that remote work is viable, and more companies are migrating to the cloud. This has increased the demand for IT professionals like DevOps Engineers, Cloud Engineers, and more.
 
-You should take this course to:
+Taking this course will:
 
-Be ready to enter the high-demand and well paid job market in the world,
-Create your own business,
-Be debt free
-Be able to lift your family up
-Change your life.
-etc.
+Prepare you for a high-demand, well-paid job market.
+Help you create your own business.
+Provide financial independence.
+Improve your family's financial standing.
+3. I have no computer knowledge. Can I still take this course?
 
+Yes! No prior computer knowledge is required. In just 6 months, we will take you from a beginner to an expert in the skills we teach. Many of our successful students came from various non-technical professions.
 
-I have no computer knowledge, can I still take this course?
-Yes, you don’t need any previous computer knowledge to take this course. In 6 months, we will take you from zero to hero in the skills we teach.
+4. What salary can I expect after completing this course?
 
-We have hundreds of former students around the world who have found life-changing works after coming to Utrain. These students were originally from different professions: nurse, housekeeper, courier, pharmacist, engineer, medical Doctor, etc.
+While salaries vary, our top students typically start with annual salaries between $80,000 and $220,000.
 
-So anyone with computer skills or not would do well with this training.
+5. Where will I work after this training?
 
-What will be my future salary after this training ?
-While salaries can widely vary, our top students start with salaries ranging from $80,000 to $220,000 year.
+With the skills acquired, you can work for major companies like AWS, Google, Accenture, Microsoft, or IT departments of various sectors like:
 
-Where will I work after this training?
-By taking this training, you will have the skills to work in tech companies such as AWS, Google, Accenture, Facebook, Microsoft, HP. You will also be able to work in the IT departments of:
+Banks: JP Morgan, Wells Fargo, Bank of America.
+E-commerce: Amazon, Walmart, eBay.
+Private sectors: Boeing, Coca-Cola, Accenture.
+Restaurants: McDonalds, Chipotle.
+Brand Designers: Nike, Puma, Adidas.
+6. What will I learn in this program?
 
-Banks: JP Morgan, Wells Fargo, Bank of America,
-e-commerce and stores : Amazon, Walmart, eBay, Costco, etc.
-Private sectors : Accenture, Boeing, Booz Allen Hamilton, Man Tech, Coca-Cola, etc.
-Restaurants : McDonalds, Fridays, Chipotle, etc.
-Brand Designers : Nike, Puma, Adidas, etc.
-Click here to see the complete list of companies where our former students work.
+The training covers:
 
-What will I learn through this training program ?
-Computer fundamentals,
-Linux Operation Systems,
-RedHat Preparation Courses,
-Fundamentals of updated DevOps Engineering tools (Git bash, Git hub, Jenkins, Docker, Tomcat, Ansible, Kubernetes, Terraform, Splunk),
-Fundamentals of Cloud computing (AWS),
-Enterprise-type hands on projects,
-Resume writing skills,
-Interview Skills.
-Be confident, if you don’t understand some of these terms, this training aims to teach them to you so that you master them.
+Computer Fundamentals
+Linux Operating Systems
+DevOps Tools (Git, Jenkins, Docker, Kubernetes, Ansible, Terraform)
+Cloud Computing (AWS)
+Hands-on Enterprise Projects
+Resume Writing and Interview Skills
+7. How long is the training program?
 
-How long is the training program ?
-The program last 6 months with a life-time access for retake if needed.
+The program lasts 6 months with lifetime access for retakes. Classes are conducted online:
 
-Live online classes are on Mondays and Tuesdays from 06:00 PM to 09:30 PM Eastern time for Weekday Sessions.
+Weekdays: Mondays and Tuesdays, 6:00 PM to 9:30 PM EST.
+Weekends: Saturdays, 10:00 AM to 1:30 PM, and Sundays, 3:00 PM to 6:30 PM EST.
+8. I don’t live in the USA. Can I still take the course?
 
-For Weekend sessions, live online classes are on Saturdays from 10:00 AM to 01:30 PM and Sundays from 03:00 PM to 06:30 PM Eastern Time 
+Yes! The course is entirely online, so you can attend from anywhere in the world.
 
-I am not living in the USA, can I take the course ?
-Yes, we have students from all over the world, from France, Canada, UK, Germany, Cameroon, Nigeria, etc.
+9. Do students get jobs after the program?
 
-All our courses are totally online. So no matter where you are, you too can take this course.
+Yes! Many students land jobs before the program ends. We provide testimonials and success stories from our alumni.
 
-Are your students really getting jobs after the program ?
-Sure. In general, some students find their life-changing job even before the end of their training. We also have a lot of testimonials by the end of the class (students testify in front of their class mates).
+10. How do I enroll in the training program?
 
-As other students, you will have what you need to have a job too.
+You can enroll through our website by selecting your payment plan. For assistance, contact our help desk at:
 
-Click here to see students testimonials.
+Phone: +1 (302) 565 5106
+Email: contact@utrains.org
+11. Is the training program easy?
 
-How should I enroll in the traning program ?
-You can directly enroll through the website by choosing your payment plan.
+Success in this program requires hard work, discipline, and perseverance. Many have succeeded, and with willpower, you can too.
 
-We are always happy to assist and provide guidance. You can also contact the Utrain Help desk at :
+12. What if I miss a class or have a family emergency?
 
-Tel : +1 (302) 565 5106
-email : contact@utrains.org
-You can also contact us from our contact page by clicking here.
+Classes are recorded, and videos are available to review. If you miss classes due to an emergency, we offer flexibility to catch up in future sessions.
 
-Is the training program easy ?
-Nothing is easy in life. It’s all about hard work, discipline and perseverance. If you are on this platform (utrains.org), it is because you have a great willingness to take this course and therefore move to another stage of your life, leaving your current level to rise according to the goal you set for yourself.
+13. Are there any discounts available?
 
-The most important thing is: Willpower and passion.
+The course is already discounted from $15,000 to $3,500. If you pay in cash, there is an additional $500 discount.
 
-Others have done it, so you can do it too.
+14. Can I take this course if I am over 60 years old?
 
-what if I am not available the day of the class or if I miss a class?
-The class is recorded and the video is made available to the students. So nothing to worry about.
+Yes! Age is not a barrier in IT. Success depends on dedication and commitment, not age.
 
-What if I have family emergency and cant continue to attend classes?
-We do understand that things happen that we do not control, and for that we can accommodate students to any other upcoming session for them to catch up.
+15. Do you help with job searching?
 
-Is there any discount?
-this course already discounted from $15000 to $3500 and also if you pay cash, you get an extra $500 discount so no more discount is available than what you see on the site
+Yes, we guide you through creating an impressive resume and provide interview coaching. However, you’ll be responsible for attending the interviews.
 
-discount?
-this course already discounted from $15000 to $3500 and also if you pay cash, you get an extra $500 discount so no more discount is available than what you see on the site
+16. Will I get a certification after the training?
 
+We will prepare you for the RHCSA certification, which is recognized globally.
 
-I am more than 60 years old can I take this course?
-The IT field is one of few fields in which if you can crawl and type the keyboard, then you are fine. Also looking at our past students, the successful ones are the ones that were commited and had a lot of hunger for success. It was never about their age or background. So, yes you can.
+17. Discover our Lead Instructor: Serge Kamgang
 
-Do you help with job searching ?
-Yes we guide you on best practices when it comes to building an attractive resume, we also coach you on how to handle interviews, but at the end of the day you need to sit in the interview not us.
+Serge Kamgang is a Senior DevOps Engineer with over 10 years of experience. He founded Utrains to help others succeed in IT, having transformed his own life through similar training. Join our community and start your journey to a rewarding career.
 
-Are we going to get a certification at the end of this training?
-We will not issue an end of session cert as it will not be recognized by companies but we will prep you to take the RHCSA exam cert which is recognized in the world and it shows that you know how to administer the Linux system.
+18. How does the program work?
 
-Discover our Lead Instructor
-Serge Kamgang is a Senior DevOps Engineer with over 10 years of experience, having worked with several American companies. With no initial training in IT, Serge began his career in data warehouses, struggling to support his family by working two or three jobs. His life changed the day he discovered an IT training course, which opened the door to a career change. A year later, he landed a position as a systems administrator at Bank of America, quadrupling his income and achieving financial freedom.
+We offer a 6-month training covering:
 
-In 2016, driven by the desire to share his knowledge and help those in a similar situation to him, Serge founded Utrains. His goal is to enable others to develop in the field of IT and to flourish financially. Since then, he has trained several thousand people, helping them become qualified DevOps engineers and transform their professional lives.
+Linux System Administration
+AWS Cloud Services
+DevOps Tools
+The course includes practical enterprise-like projects and job search assistance.
 
-Don’t wait any longer to change your life like Serge did! Register now for Utrains training and take the first step towards a rewarding career and financial freedom. Join a community of thousands of people who have already found success in IT thanks to Utrains. Your future starts here.
+19. What are the payment plans?
 
-Uncover the extraordinary success story of Serge Kamgang.
+Full payment: $3000 (with a $500 discount)
+3 installments: $1100 x 3 (with a $200 discount)
+6 installments: $584 x 6
+20. What if I can’t attend live classes?
 
-Talk to instructor or serge please call our phone number.
+All live classes are recorded, and additional catch-up sessions are available during the week for those who need assistance.
 
+21. Can I take only the DevOps part of the training?
 
-How does this program work?
-Hello There! Welcome to utrains
-We offer six months of training on Linux system administration, AWS, and DevOps. The next session begins on April 20th and it's gonna run on Saturdays and Sundays. 
-Registration is currently ongoing and the available spots are very limited.
-The training fee is $3500. But we have 3 payment plans to which you can subscribe:
-- Full payment: $ 3000 (you have a $500 discount)
-- 3 installment plans $1100 x 3 (you have a $200 discount)
-- 6 installment plan $584 x 6
-To subscribe to the next session,
-please go to our home page at utrains.org,
-Scroll down to the section "Upcoming Sessions" 
-Then click on the button Enroll Today.
-Then choose your payment plan and proceed with your checkout.
-For more information, you may want to read through the school website a
-ASKEDains.org or visit our FAQ section.
-Feel free anytime to contact us through the number +1 (302) 689 3440 or this panel.
-Looking forward to hearing from you again.
-Utrains support
-
-Alternative answer: We offer a 6-month training on the following topics:
-- Linux system administration (CentOS, Ubuntu, Oracle, Redhat)
-- AWS ( various AWS cloud services)
-- DevOps (Various DevOps tools like Jenkins, Terraform, Ansible, Kubernetes,  and more)
-We put the various concepts learned into practice using enterprise-like projects to give you more practical experience. At the end of the training, we assist you in building an attractive resume giving you useful tips for job search in the IT field.
-How much does the training cost 
-Hello there, the training fee is $3500. But we have 3 payment plans to which you can subscribe:
-- full payment: $ 3000 (you have a $500 discount)
-- 3 installment plans $1100 x 3 (you have a $200 discount)
-- 6 installment plan $584 x 6
-Thanks
-When is the next session?
-Hello There! Welcome to utrains
-The next session begins on April 20th and it's gonna run on Saturdays and Sundays. Registration is currently ongoing and the available spots are very limited. For more information, you may want to read through the school website at utrains.org or visit our FAQ section.
-Feel free anytime to contact us through the number on the platform or through this panel.
-Looking forward to hearing from you again.
-How can I subscribe to the program?
-Hello There! To subscribe to the next session,
-please go to our home page at utrains.org,
-Scroll down to the section "Upcoming Sessions" 
-Then click on the button Enroll Today.
-Then choose your payment plan and proceed with your checkout.
-
-
-
-
-
-
-What is the deadline to register for the next session?
-
-
-There is no specific deadline to register. Registration for the next session is currently ongoing and the available spots are very limited. The enrollments will be closed as soon as we reach a specific number of students.
-
-For other information, you may want to read through the website or visit our FAQ section.
-
-Feel free anytime to contact us through the number on the platform or through this panel.
-
-Looking forward to hearing from you again.
-
-What type of computer do I need to start the course?
-
-. Also, check our FAQ area to have some clarification on some questions. In case you have any more worries, don't hesitate to contact us through this same channel or through the number on our website. We look forward to hearing from you soon…
-
-
-
-
-After the training, do  we get a certificate?
-
-
-We don’t give certificates to students after the training, but we give the job experience you need. We help you build an attractive resume and walk you through some tips to help you prepare for interviews. 
-
-
-
-
-
-
-
-
-I won't be able to follow the live class, what can I do ?
-
-
-The live class videos are always recorded so you can go through the videos at any time. Also catch up sessions are done during the week for those that have specific questions or difficulties with class materials or even those that are falling behind.
-
-
-You can attend those sessions if you face any issue while going through the materials or the live class.
-
-
-We also have the live chat and the tickets channel through which you can get in touch with the support team for any issue or concern.
-
-
-Let us know if you have any other questions.
-
-
-Thanks
-
-
-Is it possible to do only the devops part of the training?
-
-We propose a six months training on Linux system administration and DevOps. You can enroll for the next session that starts on July 8th 2022. The training starts with the Linux administration part so you can decide to ignore that part and start taking the course seriously only when we start with the DevOps part. But we will advise you to follow the course completely to be better prepared for interviews.Let us know if there are any other issues or concerns. Thanks
-
-
-
-
-
-
+We recommend taking the entire course, but you may choose to focus on the DevOps section if desired.

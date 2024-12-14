@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utrains Chatbot</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body, html {
+            background-color: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Floating Chatbot Button */
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            padding: 15px;
+            border-radius: 50px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .chatbot-icon img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .chatbot-button span {
+            font-weight: 500;
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+
+        /* Chat Container */
+        .chat-container {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 400px;
+            height: 550px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        /* Header */
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f9f9f9; 
+            color: #333;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .chat-header .avatar img {
+    width: 20px;  /* Adjusted width */
+    height: 20px; /* Adjusted height */
+    border-radius: 5%;
+    margin-right: 10px; /* Spacing between logo and text */
+}
+
+
+        .chat-header .chat-info {
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+
+        .chat-header .chat-info h4 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .chat-header .chat-info p {
+            margin: 0;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .chat-header .close-btn {
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* Chat Body */
+        .chat-body {
+            flex-grow: 1;
+            padding: 15px;
+            background-color: #f9f9f9;
+            overflow-y: auto;
+            font-size: 15px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .chat-message {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .chat-message.utrains .message-text {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 12px;
+    border-radius: 15px 15px 15px 0;
+    max-width: 70%;
+    font-size: 14px;
+    line-height: 1.4;
+    display: inline-block;
+    animation: slide-in-left 0.5s ease-out;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+        .chat-message.user .message-text {
+    background-color: #007bff;  /* Change to a brighter blue */
+    color: white;
+    padding: 12px;
+    border-radius: 15px 15px 0 15px;
+    max-width: 70%;
+    font-size: 14px;
+    line-height: 1.4;
+    display: inline-block;
+    animation: slide-in-right 0.5s ease-out;
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.1);
+}
+
+        .message-text {
+            padding: 10px;
+            border-radius: 15px;
+            max-width: 70%;
+            font-size: 14px;
+            line-height: 1.4;
+            display: inline-block;
+        }
+
+        .common-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .common-questions button {
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 10px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: left;
+            transition: background-color 0.3s ease;
+        }
+
+        .common-questions button:hover {
+            background-color: #e0f7fa;
+        }
+
+        /* Footer */
+        .chat-footer {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            border-top: 1px solid #ddd;
+            background-color: white;
+        }
+
+        .chat-footer input {
+            flex-grow: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            background-color: #f1f1f1;
+            outline: none;
+        }
+
+        .chat-footer input::placeholder {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .chat-footer .send {
+            font-size: 20px;
+            cursor: pointer;
+            color: #007bff;
+            margin-left: 10px;
+        }
+
+        /* Add animation for messages appearing from the right */
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Add animation for messages appearing from the left */
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Floating Chatbot Button -->
+<div class="chatbot-button" id="chatbotIcon">
+    <div class="chatbot-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712024.png" alt="Chatbot Icon">
+    </div>
+    <span>Chat with us</span>
+</div>
+
+<!-- Chat Container -->
+<div class="chat-container" id="chatContainer">
+    <!-- Header -->
+    <div class="chat-header">
+        <div class="avatar">
+            <img src="https://utrains.org/wp-content/uploads/2023/03/utrains-icon-300x300.png" alt="Chatbot Avatar">
+        </div>
+        <div class="chat-info">
+            <h4>Utrains - AI Sales Expert 🤖</h4>
+            <p>Online</p>
+        </div>
+        <div class="close-btn" id="closeBtn">✖</div>
+    </div>
+
+    <!-- Chat Body -->
+    <div class="chat-body" id="chatBody">
+        <!-- Utrains welcome message -->
+        <div class="chat-message utrains">
+            <div class="message-text">
+                <img src="https://utrains.org/wp-content/uploads/2023/03/utrains-icon-300x300.png" alt="Logo" style="width:20px; vertical-align:middle; margin-right:8px;">
+                Hi! I’m , Utrains AI sales expert 🤖. How can I help you today?
+            </div>
+        </div>
+
+        <!-- Common Questions -->
+        <div class="common-questions">
+            <button class="query-button" data-query="I want to enroll for the course">I want to enroll for the course</button>
+            <button class="query-button" data-query="I want to contact sales executive">I want to contact sales executive</button>
+            <button class="query-button" data-query="I need help choosing the right course">I need help choosing the right course</button>
+        </div>
+    </div>
+
+
+    <div id="contactInfo" style="display:none;">
+        <label for="mobileNumber">Mobile Number (with country code):</label>
+        <input type="text" id="mobileNumber" placeholder="+1 234567890" />
+      
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="yourname@example.com" />
+      
+        <button type="button" id="submitContactInfoButton">Submit</button>
+      </div>
+
+    <!-- Footer -->
+    <div class="chat-footer">
+        <input type="text" id="userInput" placeholder="Tell us how we can help...">
+        <div class="send" id="sendBtn">➤</div>
+    </div>
+
+
+
+</div>
+
+<script>
+    // Get elements
+    const chatbotIcon = document.getElementById('chatbotIcon');
+    const chatContainer = document.getElementById('chatContainer');
+    const closeBtn = document.getElementById('closeBtn');
+    const sendBtn = document.getElementById('sendBtn');
+    const userInput = document.getElementById('userInput');
+    const chatBody = document.getElementById('chatBody');
+    const notification = document.querySelector('.chatbot-notification');
+    const queryButtons = document.querySelectorAll('.query-button');
+
+    // Function to show loading indicator
+function showLoading() {
+    const loadingIndicator = document.createElement('div');
+    loadingIndicator.className = 'chat-message utrains loading';
+    loadingIndicator.innerHTML = '<div class="message-text">Typing...</div>';
+    chatBody.appendChild(loadingIndicator);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+// Hide loading indicator
+function hideLoading() {
+    const loading = document.querySelector('.chat-message.loading');
+    if (loading) chatBody.removeChild(loading);
+}
+
+    // Show notification after a delay to encourage interaction
+    setTimeout(() => {
+        notification.style.display = 'block';
+    }, 5000);
+
+    document.getElementById('userInput').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();  // Prevents form submission (if the form is within a <form> tag)
+        document.getElementById('sendBtn').click();  // Trigger the send button click
+    }
+    });
+
+    // Show chat window when chatbot icon is clicked
+    chatbotIcon.addEventListener('click', () => {
+        chatContainer.style.display = 'flex';
+        chatbotIcon.style.display = 'none'; // Hide the floating icon when chat window is open
+        notification.style.display = 'none'; // Hide notification when chat is open
+        showWelcomeMessage();
+    });
+
+    // Hide chat window when close button is clicked
+    closeBtn.addEventListener('click', () => {
+        chatContainer.style.display = 'none';
+        chatbotIcon.style.display = 'flex'; // Show the floating icon when chat window is closed
+    });
+
+    // Add event listeners to query buttons
+    queryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const query = button.getAttribute('data-query');
+            displayMessage(query, 'outgoing');
+            getChatbotResponse(query); // Send the button query directly to the API
+        });
+    });
+
+    // Function to get chatbot response
+    function getChatbotResponse(query) {
+        showLoading();
+        //fetch('https://chat.awscertif.site/chatbot', {
+        fetch('/chatbot', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ question: query })
+        })
+        .then(response => {
+            hideLoading();
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            //displayMessage(data.response || "I couldn't find an answer to that.", 'incoming');
+            const responseMessage = data.response || "I couldn't find an answer to that.";
+            displayMessage(formatResponse(responseMessage), 'incoming');
+        })
+        .catch(error => {
+            hideLoading();
+            console.error('Error:', error);
+            displayMessage("Sorry, I couldn't connect. Try again later.", 'incoming');
+        });
+    }
+
+    // Send message
+    sendBtn.addEventListener('click', () => {
+        const userInputValue = userInput.value.trim();
+        if (userInputValue !== '') {
+            displayMessage(userInputValue, 'outgoing');
+            userInput.value = ''; // Clear input field
+
+            getChatbotResponse(userInputValue);
+        }
+    });
+
+    // Function to format the response into a list
+function formatResponse(response) {
+    // Check if the response contains courses
+    if (response.includes("Here are the main courses included")) {
+        // Extract the course list from the response
+        const courseListStart = response.indexOf(':') + 1;
+        const courseList = response.substring(courseListStart).trim();
+        
+        // Split the courses into an array
+        const courses = courseList.split(/[\d]+\.\s+/).filter(Boolean); // Regex to split by numbered items
+
+        // Create a list element
+        let formattedResponse = '<ul style="list-style-type: disc; padding-left: 20px;">';
+        courses.forEach(course => {
+            formattedResponse += `<li>${course.trim()}</li>`;
+        });
+        formattedResponse += '</ul>';
+        
+        return formattedResponse;
+    } else {
+        // Return the response as is if no special formatting is needed
+        return response;
+    }
+}
+
+document.getElementById('submitContactInfoButton').addEventListener('click', function () {
+  const mobileNumber = document.getElementById('mobileNumber').value;
+  const email = document.getElementById('email').value;
+
+  if (mobileNumber.trim() !== '' && email.trim() !== '') {
+    // Send the contact info to the Flask backend
+    //fetch('https://chat.awscertif.site/submit-contact-info', {
+    fetch('/submit-contact-info', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        mobileNumber: mobileNumber,
+        email: email
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.error) {
+        alert('Error: ' + data.error);
+      } else {
+        console.log(data.message);
+
+        // Hide the contact info form after submission
+        document.getElementById('contactInfo').style.display = 'none';
+        alert('Your contact details have been submitted!');
+        
+        // Clear the input fields
+        document.getElementById('mobileNumber').value = '';
+        document.getElementById('email').value = '';
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  } else {
+    alert("Please provide both your mobile number and email address.");
+  }
+});
+
+    
+ function displayMessage(message, type) {
+    const messageElement = document.createElement('div');
+    messageElement.classList.add('chat-message', type === 'outgoing' ? 'user' : 'utrains');
+    
+    // For incoming messages (bot), use innerHTML to render HTML content like lists
+    if (type === 'incoming') {
+        messageElement.innerHTML = `<div class="message-text">${message}</div>`;
+        const shouldDisplayForm =   checkUserContactInfo();
+        if (shouldDisplayForm) {
+            displayContactInfoForm();
+        }
+        
+    } else {
+        messageElement.textContent = message;
+        messageElement.innerHTML = `<div class="message-text">${message}</div>`;
+    }
+
+    chatBody.appendChild(messageElement);
+    chatBody.scrollTop = chatBody.scrollHeight; // Auto-scroll to the bottom
+}
+
+ function checkUserContactInfo() {
+    try {
+        const response =  fetch('/check_user_contact_info');
+        const data =  response.json();
+        return !data.exists;  // Return true if contact info does NOT exist
+    } catch (error) {
+        console.error('Error checking user contact info:', error);
+        return false;  // Default to false if there's an error
+    }
+}
+function displayContactInfoForm() {
+    // Display the contact info form
+    const contactInfoForm = document.getElementById('contactInfo');
+    contactInfoForm.style.display = 'block';  // Make the form visible
+}
+
+    
+
+
+    // Function to show welcome message
+    function showWelcomeMessage() {
+        displayMessage('Hello! How can I assist you today?', 'incoming');
+    }
+</script>
+
+</body>
+</html>
